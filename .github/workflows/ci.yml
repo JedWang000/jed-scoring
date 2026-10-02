@@ -24,6 +24,8 @@ jobs:
         run: npx playwright install chromium
       - name: Verify source and packaged extension
         run: npm run verify:package
+      - name: Include license notices
+        run: Copy-Item LICENSE, THIRD_PARTY_NOTICES.md -Destination dist
       - name: Upload verified extension
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
