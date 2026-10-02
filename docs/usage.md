@@ -6,7 +6,7 @@
 
 Download **JED-Scoring-v0.2.1.zip** from the [release page](https://github.com/JedWang000/jed-scoring/releases/tag/v0.2.1). Extract it into a folder you will keep. At `chrome://extensions` or `edge://extensions`, enable Developer mode, choose Load unpacked, and select the folder containing `manifest.json`. Do not select the ZIP or a source-code folder that has not been built.
 
-To update, save your Studio work, replace the extension files (or select the new folder), click Reload on the extension card, and refresh Studio. Reconnect and confirm your reference clip again if prompted. Browser-managed extension data is separate from the extracted folder; selecting a different folder may create a different extension identity. Keep a stable folder when updating.
+To update, save your Studio work, replace the extension files (or select the new folder), click Reload on the extension card, and refresh Studio. Select the video, reconnect, confirm the reference clip, and set Offset again after the panel reloads. Browser-managed extension data is separate from the extracted folder; selecting a different folder may create a different extension identity. Keep a stable folder when updating.
 
 ### Prepare and synchronize
 
@@ -33,7 +33,7 @@ Video audio starts enabled. Use Mute local video to hear only Studio. Pop out vi
 | Sync pauses after a clip edit | Read the warning, restore supported clip settings, and explicitly bind again. |
 | Video/audio will not start | Click Allow video audio and continue. Browser autoplay may require a gesture. |
 | Video cannot be decoded | Try an MP4/H.264 or WebM export supported by your browser. |
-| Reopening asks for the video | Select the original file again; the extension does not retain its bytes. |
+| Reopening resets the panel | Select the video, confirm the reference clip, and set Offset again. Only the language preference persists. |
 | Drift or upstream UI change | Try Resync/Offset, keep Studio active, and report a redacted diagnostics summary if it persists. |
 | Long-video WAV generation fails | Use a shorter video or free browser memory. The WAV is generated in memory. |
 
@@ -45,7 +45,7 @@ The extension does not export a finished video with music. Perform final media a
 
 从[发布页面](https://github.com/JedWang000/jed-scoring/releases/tag/v0.2.1)下载 **JED-Scoring-v0.2.1.zip**，解压到长期保留的目录。在 `chrome://extensions` 或 `edge://extensions` 开启开发者模式，选择“加载已解压的扩展程序”，选中包含 `manifest.json` 的文件夹。不要选择 ZIP 或尚未构建的源码目录。
 
-更新前保存 Studio 工程，替换扩展文件（或选择新目录），点击扩展卡片上的“重新加载”，再刷新 Studio。按提示重新连接并确认参考音频块。浏览器扩展数据与解压目录分别管理；换目录可能产生不同扩展标识，建议更新时保持目录稳定。
+更新前保存 Studio 工程，替换扩展文件（或选择新目录），点击扩展卡片上的“重新加载”，再刷新 Studio。侧边栏重载后重新选择视频、连接 Studio、确认参考块并设置 Offset。浏览器扩展数据与解压目录分别管理；换目录可能产生不同扩展标识，建议更新时保持目录稳定。
 
 ### 准备与同步
 
@@ -72,7 +72,7 @@ The extension does not export a finished video with music. Perform final media a
 | 修改音频块后暂停 | 按警告恢复支持的设置，并重新显式绑定。 |
 | 视频或原声无法开始 | 点击允许视频音频并继续，满足浏览器自动播放手势要求。 |
 | 无法解码视频 | 尝试浏览器支持的 MP4/H.264 或 WebM。 |
-| 重开后要求重新选视频 | 重新选择原文件；扩展不会保留视频内容。 |
+| 重开后面板重置 | 重新选择视频、确认参考块并设置 Offset；仅持久化语言偏好。 |
 | 漂移或上游界面变化 | 尝试重新同步、Offset，保持 Studio 激活；持续异常时反馈脱敏诊断摘要。 |
 | 长视频静音 WAV 生成失败 | 使用较短视频或释放浏览器内存；WAV 在内存中生成。 |
 

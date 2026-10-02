@@ -1,7 +1,7 @@
 # Third-party notices / 第三方许可声明
 
-The distributed extension includes the following libraries under their original licenses.
-分发的扩展包含以下库，其原始许可证保留如下。Build/test dependencies retain the licenses in their respective packages.
+This project depends on the following libraries under their original licenses. The extension bundles only imports retained by the production build.
+本项目依赖以下库，保留其原始许可证；扩展包只包含生产构建保留的导入。Build/test dependencies retain the licenses in their respective packages.
 
 ## react 18.3.1
 

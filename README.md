@@ -42,11 +42,11 @@ Original video audio is **on by default**; mute it when you only want to hear St
 
 ## Privacy and permissions
 
-The extension does not upload your original video/audio, collect analytics, or read cookies, access tokens, or authentication headers. Local storage holds metadata, reference mappings, and preferences; it does not persist video bytes or absolute file paths.
+The extension does not upload your original video/audio, collect analytics, or read cookies, access tokens, or authentication headers. The language preference is persisted locally. Video, metadata, reference binding, and Offset are session state; the current side panel does not save or restore a project. It does not persist video bytes or absolute file paths.
 
 | Permission | Purpose |
 | --- | --- |
-| `storage` | Store extension preferences and metadata. |
+| `storage` | Persist the selected interface language. |
 | `sidePanel` | Display the video and synchronization controls. |
 | `debugger` | Observe allowlisted project state and transport after you connect Studio. Chrome may display a debugging banner. |
 | `tabs` | Verify the selected Studio tab before connecting. |
@@ -82,7 +82,7 @@ src/content/      Page adapters, state validation, and MAIN-world bridge
 src/media/        Local video metadata and silent WAV generation
 src/sync/         Synchronization state machine and video controller
 src/ui/           Side panel, components, and three interface languages
-src/store/        Local project metadata and reference mappings
+src/store/        Tested persistence helpers (not wired into the side panel)
 build/            Manifest/localization and standalone observer build plugins
 scripts/          Test runners and distribution integrity verification
 tests/            Unit, source E2E, and packaged-extension tests
@@ -95,7 +95,7 @@ docs/             Usage, compatibility, architecture, and privacy
 - One local video and one explicitly confirmed reference clip are supported at a time. Reference clips must use supported timing, 1× speed, and no Warp, reverse, or clip looping.
 - Browser codec support determines which videos can play. Very long videos can exceed memory or WAV size limits.
 - Suno UI/project format changes, background tab throttling, and competing DevTools sessions can affect observation. Unsupported or ambiguous state pauses sync.
-- A saved project may require selecting the local video again after reopening the panel.
+- After the side panel is closed or reloaded, select the video, confirm the reference clip, and set Offset again; only the language preference is restored.
 
 ## Developer and customization
 
