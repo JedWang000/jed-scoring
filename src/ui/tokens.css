@@ -1,0 +1,62 @@
+:root {
+  --surface-canvas: #0b0b0a;
+  --surface-page: #10100e;
+  --surface-shell: #13120f;
+  --surface-zone: #191712;
+  --surface-raised: #1e1b15;
+  --surface-control: #0f0e0c;
+  --surface-bronze-soft: rgb(216 173 112 / 8%);
+  --text-primary: #f4efe6;
+  --text-secondary: #bcb5aa;
+  --text-tertiary: #8f887d;
+  --accent-bronze: #d8ad70;
+  --accent-bronze-bright: #f0cc94;
+  --accent-ink: #21170d;
+  --state-success: #9fcfa8;
+  --state-warning: #e3a49f;
+  --radius-detail: 6px;
+  --radius-control: 8px;
+  --radius-module: 12px;
+  --radius-shell: 14px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --type-caption: .75rem;
+  --type-secondary: .875rem;
+  --type-body: 1rem;
+  --type-subheading: 1.125rem;
+  --type-title: 1.3125rem;
+  --shadow-shell: 0 12px 28px rgb(0 0 0 / 46%);
+  --motion-fast: 150ms;
+  --motion-standard: 220ms;
+}
+
+[lang='zh-CN'] {
+  font-family: "Microsoft YaHei UI", "Microsoft YaHei", "PingFang SC",
+    "Noto Sans CJK SC", "Noto Sans SC", system-ui, sans-serif;
+  line-height: 1.62;
+}
+
+[lang='zh-TW'] {
+  font-family: "Microsoft JhengHei UI", "Microsoft JhengHei", "PingFang TC",
+    "Noto Sans CJK TC", "Noto Sans TC", system-ui, sans-serif;
+  line-height: 1.62;
+}
+
+[lang='en'] {
+  font-family: "Segoe UI Variable Text", "Segoe UI", -apple-system,
+    BlinkMacSystemFont, "Helvetica Neue", Arial, system-ui, sans-serif;
+  line-height: 1.55;
+}
+
+.numeric {
+  font-family: ui-monospace, "Cascadia Mono", "SFMono-Regular", Consolas,
+    "Liberation Mono", monospace;
+  font-variant-numeric: tabular-nums lining-nums;
+  letter-spacing: 0;
+  white-space: nowrap;
+}

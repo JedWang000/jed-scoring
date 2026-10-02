@@ -1,0 +1,60 @@
+{
+  "name": "suno-studio-video-sync",
+  "private": true,
+  "version": "0.2.1",
+  "type": "module",
+  "scripts": {
+    "assets:icons": "node scripts/generate-jed-icons.mjs",
+    "build": "vite build",
+    "test": "vitest run",
+    "test:e2e": "node scripts/run-e2e.mjs",
+    "test:package": "npm run build && node scripts/run-package-e2e.mjs",
+    "verify:package": "tsc --noEmit && npm run test && npm run test:e2e && npm run test:package && npm run verify:dist",
+    "verify:dist": "node scripts/verify-dist.mjs dist"
+  },
+  "dependencies": {
+    "idb": "8.0.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "2.0.0-beta.25",
+    "@playwright/test": "1.45.3",
+    "@testing-library/dom": "10.4.1",
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "16.3.2",
+    "@types/chrome": "0.0.268",
+    "@types/node": "22.10.2",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "@vitejs/plugin-react": "4.3.1",
+    "esbuild": "0.21.5",
+    "es-module-lexer": "0.10.5",
+    "fake-indexeddb": "6.2.5",
+    "jsdom": "^24.1.1",
+    "typescript": "5.5.4",
+    "vite": "5.4.2",
+    "vitest": "2.0.5"
+  },
+  "description": "Local-first video scoring companion for Suno Studio / 在 Suno Studio 中为本地视频配乐",
+  "license": "MIT",
+  "author": "达子 Jed_Wang",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JedWang000/jed-scoring.git"
+  },
+  "homepage": "https://github.com/JedWang000/jed-scoring#readme",
+  "bugs": {
+    "url": "https://github.com/JedWang000/jed-scoring/issues"
+  },
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "keywords": [
+    "suno",
+    "suno-studio",
+    "video-scoring",
+    "chrome-extension",
+    "local-first"
+  ]
+}
